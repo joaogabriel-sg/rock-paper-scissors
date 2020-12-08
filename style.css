@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+  font-size: 10px;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: #2f3542;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1.6rem 1%;
+  width: 100%;
+  max-width: 70rem;
+}
+
+h1 {
+  margin-bottom: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.2rem;
+  color: #f1f2f6;
+}
+
+ul {
+  list-style: none;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player {
+  background: #f1f2f6;
+  flex: 1;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.8rem;
+}
+
+.player-status {
+  width: 100%;
+  margin-bottom: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #2f3542;
+}
+
+.player-name,
+.player-scores {
+  font-size: 2rem;
+}
+
+.player-choices {
+  display: flex;
+}
+
+.player-choices li img {
+  width: 6rem;
+  margin: 0 0.4rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.player-choices li img:hover {
+  opacity: 1;
+}
+
+.player-choices li img.selected {
+  opacity: 1;
+}
+
+.game-message {
+  background: #57606f;
+  margin: 0.8rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: #f1f2f6;
+}
+
+.game-message.player-win {
+  background: #2ed573;
+  color: #2f3542;
+}
+
+.game-message.computer-win {
+  background: #ff4757;
+}
+
+.game-message.draw-game {
+  background: #ffa502;
+}
+
+.game-message span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .game {
+    flex-direction: column;
+  }
+
+  .game-message span {
+    display: block;
+  }
+}
